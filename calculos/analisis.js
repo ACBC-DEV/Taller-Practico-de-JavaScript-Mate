@@ -106,22 +106,21 @@ function proyeccionPorEmpresa(nombre) {
 function medianaGeneral() {
     const listaMedianas = salarios.map(persona => medianaPorPersona(persona.name));
     
-    //const mediana = PlatziMath.calcularMediana(listaMedianas);
-    return listaMedianas;
+    const mediana = PlatziMath.calcularMediana(listaMedianas);
+    return mediana;
 }
 
-// function medianaTop10() {
-//     const listaMedianas = salarios.map(
-//         persona => medianaPorPersona(persona.name)
-//     );
+function medianaTop10() {
+    const listaMedianas = salarios.map(persona => medianaPorPersona(persona.name));
 
-//     const medianasOrdenadas = PlatziMath.ordenarLista(listaMedianas);
+    const medianasOrdenadas = PlatziMath.ordenarLista(listaMedianas);
     
-//     const cantidad = listaMedianas.length / 10;
-//     const limite = listaMedianas.length - cantidad;
+    const cantidad = listaMedianas.length / 10;
+    const limite = listaMedianas.length - cantidad;
+    console.log({cantidad,limite});
+    // slice  toma y copy -- splice toma y corta
+    const top10 =medianasOrdenadas.slice(limite, medianasOrdenadas.length);
     
-//     const top10 = medianasOrdenadas.slice(limite, medianasOrdenadas.length);
-
-//     const medianaTop10 = PlatziMath.calcularMediana(top10);
-//     return medianaTop10;
-// }
+    const medianaTop10 = PlatziMath.calcularMediana(top10);
+    return medianaTop10;
+}

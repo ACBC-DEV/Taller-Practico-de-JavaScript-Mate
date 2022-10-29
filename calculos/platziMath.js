@@ -52,8 +52,8 @@ PlatziMath.calcularMediana = function calcularMediana(listaDesordenada) {
     } else {
         const indexMitadListaImpar = Math.floor(lista.length / 2);
         const medianaListaImpar = lista[indexMitadListaImpar];
-        console.log(indexMitadListaImpar);
-        console.log(medianaListaImpar);
+        //console.log(indexMitadListaImpar);
+       // console.log(medianaListaImpar);
         return medianaListaImpar;
     }
     }
@@ -70,12 +70,12 @@ PlatziMath.calcularPromedio = function calcularPromedio(lista) {
     }
 
 PlatziMath.ordenarLista = function ordenarLista(listaDesordenada) {
-    function ordenarListaSort(valorAcumulado, nuevoValor) {
-        return valorAcumulado - nuevoValor;
-    }
+    // function ordenarListaSort(valorAcumulado, nuevoValor) {
+    //     return valorAcumulado - nuevoValor;
+    // }
     
-    // const lista = listaDesordenada.sort((a,b) => a-b);
-    const lista = listaDesordenada.sort(ordenarListaSort);
+    const lista = listaDesordenada.sort((a,b) => a-b);
+    // const lista = listaDesordenada.sort(ordenarListaSort);
     
     return lista;
     }
